@@ -3,62 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday, My Dearest! ❤️</title>
+  <title>Happy Birthday, Ameesha! 🎉</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   
   <style>
     body { font-family: 'Poppins', sans-serif; }
-    h1, .quote, .romantic-font { font-family: 'Playfair Display', serif; }
+    h1, .quote { font-family: 'Playfair Display', serif; }
     
-    /* Smooth reveal animation */
-    .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+    /* Smooth reveal animation for the hidden text */
+    .fade-in { animation: fadeIn 0.6s ease-out forwards; }
     @keyframes fadeIn { 
-      from { opacity: 0; transform: translateY(15px); } 
+      from { opacity: 0; transform: translateY(10px); } 
       to { opacity: 1; transform: translateY(0); } 
-    }
-
-    /* Subtle heartbeat animation for the heart emoji */
-    .heartbeat { animation: heartbeat 1.5s infinite; display: inline-block; }
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.15); }
     }
   </style>
 </head>
 
-<body class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-[#fff0f0] via-[#fdf4f4] to-[#fce3e3]">
+<body class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-[#ff9a9e] to-[#fad0c4]">
   
-  <div class="bg-white/95 backdrop-blur-sm shadow-[0_20px_60px_-15px_rgba(128,0,32,0.15)] border border-rose-50 rounded-3xl p-8 sm:p-10 max-w-md w-full text-center relative overflow-hidden">
+  <div class="bg-white shadow-2xl rounded-3xl p-8 sm:p-10 max-w-md w-full text-center relative overflow-hidden">
     
-    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#d4af37]"></div>
+    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-400 to-purple-400"></div>
 
-    <div class="text-4xl mb-3">🎂</div>
-    <h1 class="text-3xl sm:text-4xl text-rose-950 mb-4 leading-tight">
+    <div class="text-4xl mb-4">🎂</div>
+
+    <h1 class="text-3xl sm:text-4xl text-gray-800 mb-4 leading-tight">
       Happy Birthday,<br>
-      <span class="text-[#800020] font-bold">Ameesha <span class="heartbeat">❤️</span></span>
+      <span class="text-pink-500 font-bold">Ameesha! ❤️</span>
     </h1>
 
-    <p class="text-rose-900/80 mb-6 leading-relaxed text-sm sm:text-base font-medium">
-      My dearest Ameesha, wishing you a day overflowing with love, laughter, and everything that makes your heart smile. May this year bring you endless success, the deepest happiness, and the most unforgettable memories that we share together.
+    <p class="text-gray-600 mb-6 leading-relaxed text-sm sm:text-base">
+      Wishing you a day filled with love, laughter, and everything that makes you smile. 
+      May this year bring you success, happiness, and unforgettable memories.
     </p>
 
-    <div class="quote bg-[#fff5f5] border-l-4 border-[#800020] rounded-r-xl p-5 mb-8 text-rose-900 italic text-sm sm:text-base shadow-sm">
-      "To the most beautiful, kind, and amazing woman in the world: Happy Birthday 🥳! Hope today is filled with nonstop smiles and all your favorite things. ✨"
+    <div class="quote bg-pink-50 border-l-4 border-pink-400 rounded-r-xl p-4 mb-8 text-gray-700 italic text-sm sm:text-base shadow-sm">
+      "To the most beautiful, kind, and amazing woman in the world: Hope today is filled with nonstop smiles and all your favorite things. ✨"
     </div>
 
     <div id="surprise" class="hidden mb-8">
-      <p class="text-lg font-semibold text-[#800020] fade-in romantic-font tracking-wide">
+      <p class="text-lg font-semibold text-purple-600 fade-in">
         You are a limited edition with unlimited potential...<br>
-        <span class="text-rose-600 mt-2 block">Hope your birthday lights up with dreams and love 💖💖💖</span>
+        <span class="text-pink-500">Hope your birthday lights up with dreams and love 💖</span>
       </p>
-      <div class="text-3xl mt-4 fade-in" style="animation-delay: 0.3s;">🎉 🎈 🎁</div>
+      <div class="text-3xl mt-4 fade-in" style="animation-delay: 0.2s;">🎉 🎈 🎁</div>
     </div>
 
-    <button id="blastBtn" onclick="celebrate()" class="w-full py-4 bg-gradient-to-r from-[#800020] to-[#990033] text-white font-medium rounded-2xl shadow-[0_8px_20px_rgba(128,0,32,0.3)] hover:shadow-[0_10px_25px_rgba(128,0,32,0.4)] hover:scale-[1.02] active:scale-95 transition-all duration-300 text-base sm:text-lg tracking-wide">
-      A Special Birthday Wish For You 💝
+    <button id="blastBtn" onclick="celebrate()" class="w-full py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all duration-200 text-lg">
+      Click for a Blast 🎊
     </button>
 
   </div>
@@ -71,21 +66,21 @@
       // Reveal the hidden text and emojis
       surpriseEl.classList.remove('hidden');
       
-      // Update button text after click to something romantic
-      btnEl.innerHTML = "Forever Yours ❤️";
+      // Update button text after click
+      btnEl.innerText = "Blast Again! 🚀";
 
-      // Trigger Confetti with romantic colors: Deep Red, Rose Pink, Soft Pink, and Gold
+      // Trigger Confetti with custom matching colors
       confetti({
         particleCount: 150,
-        spread: 75,
+        spread: 70,
         origin: { y: 0.6 },
-        colors: ['#800020', '#d4af37', '#ff9a9e', '#ffb7b2']
+        colors: ['#ff9a9e', '#ec4899', '#a855f7', '#fcd34d']
       });
 
       setTimeout(() => {
-        confetti({ particleCount: 100, spread: 120, origin: { x: 0.1 }, colors: ['#800020', '#d4af37', '#ff9a9e'] });
-        confetti({ particleCount: 100, spread: 120, origin: { x: 0.9 }, colors: ['#800020', '#d4af37', '#ff9a9e'] });
-      }, 350);
+        confetti({ particleCount: 100, spread: 120, origin: { x: 0.1 } });
+        confetti({ particleCount: 100, spread: 120, origin: { x: 0.9 } });
+      }, 300);
     }
   </script>
 </body>
